@@ -1,0 +1,113 @@
+<app-nav id="Order"></app-nav>
+
+<div [ngClass]="isDarkMode?'Darka':''">
+
+  <!-- slider Area Start-->
+
+  <div class="slider-area ">
+
+    <!-- Mobile Menu -->
+
+    <div class="single-slider slider-height2 d-flex align-items-center"
+      style="background-image: url(&quot;assets/img/hero/category.jpg&quot;);">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="hero-cap text-center">
+              <h2> {{'TitlePages.Order Status'|translate}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- slider Area End-->
+
+  <!--================Cart Area =================-->
+
+  <section class="cart_area section_padding" style="margin: 20px; padding: 20px;" *ngFor="let item of orderGetAllDto">
+    <div class="container">
+      <div class="cart_inner">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">{{'Order Status.Product'|translate}} </th>
+                <th scope="col"> {{'Order Status.Status'|translate}}</th>
+                <th scope="col"> {{'Order Status.Quantity'|translate}}</th>
+                <th scope="col"> {{'Order Status.Total'|translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="media">
+                    <div class="d-flex">
+
+                      <!--Image Serveic-->
+
+                      <img [src]="item.imageService" alt="">
+                    </div>
+                    <div class="media-body">
+
+                      <!--Title order-->
+
+                      <p>{{item.title}}</p>
+                    </div>
+                  </div>
+                </td>
+                <td>
+
+                  <!--Status order-->
+
+                  <h5>{{ language=='en'? status[item.status!]: status2[item.status!]}}</h5>
+                </td>
+
+                <td>
+
+                  <!--Qun order-->
+
+                  <h5 style="padding-left: 20px;">{{item.quantity}}</h5>
+                </td>
+                <td>
+
+                  <!--Price order-->
+
+                  <h5>$ {{item.priceFinal2}}</h5>
+                </td>
+
+                <td>
+
+                  <!--Price order-->
+
+                  <li *ngIf="status[item.status!] == 'Delivered'? !ishowbutton : ishowbutton " class="d-none d-lg-block"
+                    style="text-align: right; justify-items: right;  "> <a (click)="Rating(item)" class="btn header-btn"
+                      style="color: antiquewhite;  width: 40%; height: 50%; text-align: center; justify-content: center; margin-right: 20px;">
+                      {{'button.Rating'|translate}}</a></li>
+
+                </td>
+
+              </tr>
+
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div style="margin-right:160px ; text-align: right">
+    <a class="btn header-btn" href="#" [routerLink]="'/'"> {{'button.Go home'|translate}}</a>
+  </div>
+  
+  <!--================End Cart Area =================-->
+
+</div>
+
+
+<app-footer></app-footer>

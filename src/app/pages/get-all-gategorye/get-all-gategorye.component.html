@@ -1,0 +1,156 @@
+     
+     <app-nav  id="Catagoris"></app-nav>
+
+     <div [ngClass]="isDarkMode?'Dark':''" [dir]="'dir' | translate">
+     <!-- slider Area Start-->
+     <div class="slider-area " >
+        <!-- Mobile Menu -->
+        <div class="single-slider slider-height2 d-flex align-items-center" style="background-image: url(&quot;assets/img/hero/category.jpg&quot;);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>{{'TitlePages.Catagori' |translate}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider Area End-->
+
+    <!-- Latest Products Start -->
+    <section class="latest-product-area latest-padding" >
+        <div class="container" >
+            <div class="row product-btn d-flex justify-content-between" >
+                    <div class="properties__button">
+                        <!--Nav Button  -->
+                        <nav>                                                                                                
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"  role="tab"  aria-controls="nav-home"  aria-selected="true">{{'Catagori.All' |translate}}</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"   role="tab"   aria-controls="nav-profile" aria-selected="false">{{'Catagori.New' |translate}}</a>
+                               
+                            </div>
+                        </nav>
+                        <!--End Nav Button  -->
+                    </div>
+                  
+            </div>
+      <!-- Nav Card -->
+      <div class="tab-content" id="nav-tabContent">
+        <!-- card one -->
+        <div  *ngIf="isshowAll"  class="tab-pane fade show active" id="nav-home"  role="tabpanel" aria-labelledby="nav-home-tab">
+            <div   class="row" >
+              
+                <div class="col-xl-4 col-lg-4 col-md-6" *ngFor="let item of categoryAll">
+                    <div class="single-product mb-60">
+                        <div class="product-img">
+                            <img [src]="item.imageTitleCategory" alt="k">
+                            <div class="new-product">
+                                <!-- محتوى إضافي -->
+                            </div>
+                        </div>
+                        <div class="product-caption">
+                            <h4><a  style="font-weight: 500;" href="#" (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'? item.title:item.titleArabic}}</a></h4>
+                            <h4>{{language == 'en'? item.description:item.descriptionArabic}}</h4>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+        
+
+  <!-- card one -->
+  <div  *ngIf="!isshowAll"  class="tab-pane fade show active"  id="nav-profile" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div   class="row" >
+      
+        <div class="col-xl-4 col-lg-4 col-md-6" *ngFor="let item of categoryAll2 | slice:0:6">
+            <div class="single-product mb-60">
+                <div class="product-img">
+                    <img [src]="item.imageTitleCategory" alt="imageTitleCategory">
+                    <div class="new-product">
+                        <!-- محتوى إضافي -->
+                    </div>
+                </div>
+                <div class="product-caption">
+                    <h4><a  style="font-weight: 500;" href="#" (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'? item.title:item.titleArabic}}</a></h4>
+                    <h4>{{language == 'en'? item.description:item.descriptionArabic}}</h4>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+</div>
+
+        
+    </div>
+    
+    <!-- End Nav Card -->
+
+
+
+        </div>
+    </section>
+    <!-- Latest Products End -->
+
+  
+    <!-- Shop Method Start-->
+    <div class="shop-method-area section-padding30">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-package"></i>
+                        <h6>{{'Catagori.Free' |translate}}</h6>
+                        <p> {{'Catagori.aorem' |translate}}</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-unlock"></i>
+                        <h6> {{'Catagori.Secure' |translate}}</h6>
+                        <p>  {{'Catagori.ixpsacdolor' |translate}}</p>
+                    </div>
+                </div> 
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-reload"></i>
+                        <h6> {{'Catagori.Payment' |translate}} </h6>
+                        <p>{{'Catagori.sit' |translate}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Method End-->
+    <!-- Gallery Start-->
+    <div class="gallery-wrapper lf-padding">
+        <div class="gallery-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery1.jpg" alt="">
+                    </div> 
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery2.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery3.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery4.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="assets/img/gallery/gallery5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery End-->
+
+
+</div>
+    <app-footer></app-footer>

@@ -1,0 +1,81 @@
+<app-nav id="ServiceById"></app-nav>
+
+<div [ngClass]="isDarkMode?'Dark':''">
+    <!-- slider Area Start-->
+
+    <div class="slider-area ">
+
+        <!-- Mobile Menu -->
+
+        <div class="single-slider slider-height2 d-flex align-items-center"
+            style="background-image: url(&quot;assets/img/hero/category.jpg&quot;);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>{{'TitlePages.Service' |translate}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider Area End-->
+
+    <!--================Single Product Area =================-->
+
+    <div class="product_image_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+               
+                    <img [src]="input.imagetitleservice" alt="#" class="img-fluid"
+                        style="display: block; margin: 0 auto; width: 80%;">
+
+              
+                        
+                    <div class="single_product_text text-left">
+                        <h1 style="margin-bottom: 10px; text-align: center;">{{language == 'en'?
+                            input.name:input.titleservice}}</h1>
+                        <p style="margin-bottom: 0;">
+                            {{language == 'en'? input.description:input.descriptionArabic}}
+                        </p>
+                        <br>
+                        <p style="margin-bottom: 0;margin-top: 0;"><span
+                                style="color: black;">{{'ServiceAll.providerService' |translate}}</span>:
+                            {{input.providerName}}</p>
+                        <br>
+                        <p style="margin-bottom: 0; margin-top: 0;"><span
+                                style="color: black;">{{'ServiceAll.QuantityUnit' |translate}}</span>: {{
+                            quantityUnits[input.quantityUnit!]}}</p>
+                        <br>
+                        <p style="margin-bottom: 0; margin-top: 0;"><span
+                                style="color: black;">{{'ServiceAll.ISHaveDiscount' |translate}}</span>:
+                            {{input.isHaveDiscount}}</p>
+                        <br>
+                        <p style="margin-bottom: 0; margin-top: 0;"><span
+                                style="color: black;">{{'ServiceAll.priceAfterDiscount' |translate}}</span>:
+                            {{'gen.Price' |translate}} {{input.priceAfterDiscount}}</p>
+                        <br>
+                        <p class="discount" style="margin-bottom: 0; margin-top: 0; color: red !important;"><span
+                                style="color: black;">{{'ServiceAll.price' |translate}}</span>: {{'gen.Price'
+                            |translate}} {{input.price}}</p>
+
+                        <div class="card_area" style="text-align: center;">
+                            <div class="add_to_cart">
+                                <button href="#" class="btn_3" (click)="CilckOrder($event)">{{'button.ORDER'
+                                    |translate}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--================End Single Product Area =================-->
+
+</div>
+
+<app-footer></app-footer>

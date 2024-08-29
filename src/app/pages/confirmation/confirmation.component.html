@@ -1,0 +1,142 @@
+<app-nav id="Confirmation"></app-nav>
+
+<div [ngClass]="isDarkMode?'Dark':''">
+  <!-- slider Area Start-->
+
+  <div class="slider-area ">
+    <!-- Mobile Menu -->
+
+    <div class="single-slider slider-height2 d-flex align-items-center"
+      style="background-image: url(&quot;/assets/img/hero/category.jpg&quot;);">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="hero-cap text-center">
+              <h2>{{'TitlePages.Confirmation' |translate}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- slider Area End-->
+  <!--================ confirmation part start =================-->
+
+
+  <section class="confirmation_part section_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="confirmation_tittle">
+            <span style="font-size: 17px;">{{'Confirmation.title' |translate}}</span>
+          </div>
+        </div>
+        <div class="col-lg-6 col-lx-4">
+          <div class="single_confirmation_details">
+            <h1>{{'Confirmation.order info' |translate}}</h1>
+            <ul>
+              <li>
+                <!--OrderId-->
+                <p>{{'order info.order number' |translate}}</p><span>: {{input.orderId}}</span>
+              </li>
+              <li>
+                <!--DateOrder-->
+                <p>{{'order info.data' |translate}}</p><span>: {{input.dateOrder|date:'dd/MM/yyyy'}}</span>
+              </li>
+              <li>
+                <!--titleOrder-->
+                <p>{{'order info.title' |translate}}</p><span>: {{input.title}}</span>
+              </li>
+              <li>
+                <!--ClientName-->
+                <p>{{'order info.ClientName' |translate}}</p><span>: {{input.clientName}}</span>
+              </li>
+              <li>
+                <!--status-->
+                <p>{{'order info.status' |translate}}</p><span>: {{input.status}}</span>
+              </li>
+              <li>
+                <!--pricefinal-->
+                <p>{{'order info.priceFinal' |translate}}</p><span>: {{'gen.Price' |translate}}
+                  {{input.priceFinal2}}</span>
+              </li>
+              <li>
+                <!--methord-->
+                <p>{{'order info.mayment methord' |translate}}</p><span>: Check payments</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-lx-4">
+          <div class="single_confirmation_details">
+            <h1>{{'Confirmation.Billing Address' |translate}}</h1>
+            <ul>
+              <li>
+                <p>{{'Billing Address.Address1' |translate}}</p><span>: {{input.address1}}</span>
+              </li>
+              <li>
+                <p>{{'Billing Address.Address2' |translate}}</p><span>: {{input.address2}}</span>
+              </li>
+              <li>
+                <p>{{'Billing Address.city' |translate}}</p><span>: {{input.city}}</span>
+              </li>
+              <li>
+                <p>{{'Billing Address.Phone' |translate}}</p><span>: {{input.phoneUser}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="order_details_iner">
+            <h3>{{'Confirmation.Order Details' |translate}}</h3>
+            <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">{{'Order Details.Product' |translate}}</th>
+                  <th scope="col">{{'Order Details.Quantity' |translate}}</th>
+                  <th scope="col">{{'Order Details.Total' |translate}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <!--Name service-->
+                  <th colspan="2"><span>{{input.nameService}}</span></th>
+                  <!--Quantiy-->
+                  <th>x {{input.quantity}}</th>
+                  <!--PriceFinale-->
+                  <th> <span>{{'gen.Price' |translate}} {{input.priceFinal2}}</span></th>
+                </tr>
+
+
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="card_area" style="text-align: right; margin-right: 11%;">
+      <div class="add_to_cart">
+        <a class="btn_3" (click)="CilckOrder()">{{'button.Back' |translate}}</a>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+<!--================ confirmation part end =================-->
+
+<app-footer></app-footer>

@@ -1,0 +1,272 @@
+
+
+
+<app-nav id="Home"></app-nav>
+
+
+<div [ngClass]="isDarkMode?'Black':''">
+    <div style="overflow: visible;">
+
+        <!-- slider Area Start -->
+
+        <div class="slider-area ">
+
+            <!-- Mobile Menu -->
+
+            <div class="slider-active">
+                <div class="single-slider slider-height" data-background="assets/img/hero/h1_hero.jpg">
+                    <div class="container">
+                        <div class="row d-flex align-items-center justify-content-between">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
+                                <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
+                                    <img src="assets/img/hero/hero_man.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInRight" data-delay=".4s">{{'text.discount'
+                                        |translate}}</span>
+                                    <div [ngClass]="isDarkMode?'textColorDark ':''">
+                                        <h1 data-animation="fadeInRight" data-delay=".6s">{{'text.Winter' |translate}}
+                                            <br> {{'text.Collection' |translate}}</h1>
+                                        <p data-animation="fadeInRight" data-delay=".8s">{{'text.Best' |translate}}</p>
+                                    </div>
+
+                                    <!-- Hero-btn -->
+
+                                    <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
+                                        <a href="#" (click)="navCatagory($event)" class="btn hero-btn">{{'button.shop Now' |translate}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <br>
+
+            <!-- Latest Products Start -->
+
+            <section class="latest-product-area padding-bottom">
+                <div class="container">
+                    <div class="row product-btn d-flex justify-content-end align-items-end">
+
+                        <!-- Section Tittle -->
+
+                        <div class="col-xl-4 col-lg-5 col-md-5">
+                            <div class="section-tittle mb-30">
+                                <h2>{{'text.Latest Categorys' |translate}}</h2>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-7 col-md-7">
+                            <div class="properties__button f-right">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Card -->
+
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <!-- card one -->
+
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                            aria-labelledby="nav-home-tab">
+                            <div class="row">
+
+                                <div class="col-xl-4 col-lg-4 col-md-6" *ngFor="let item of categoryAll | slice:0:6">
+                                    <div class="single-product mb-60">
+                                        <div class="product-img">
+                                            <img [src]="item.imageTitleCategory" alt="k">
+                                            <div class="new-product">
+
+                                                <!-- محتوى إضافي -->
+
+                                            </div>
+                                        </div>
+                                        <div class="product-caption">
+                                            <h4><a style="font-weight: 500;" href="#"
+                                                    (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'?
+                                                    item.title:item.titleArabic}}</a></h4>
+                                            <h4>{{language == 'en'? item.description:item.descriptionArabic}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- End Nav Card -->
+
+                </div>
+            </section>
+
+            <!-- Latest Products End -->
+            <!-- Best Product Start -->
+
+            <div class="best-product-area lf-padding">
+                <div class="product-wrapper bg-height" style=" background-image: url('assets/img/categori/card.png') ">
+                    <div class="container position-relative">
+                        <div class="row justify-content-between align-items-end">
+                            <div class="product-man position-absolute  d-none d-lg-block">
+                                <img src="/assets/img/categori/card-man.png" alt="">
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2 d-none d-lg-block">
+                                <div class="vertical-text">
+                                    <span>Manz</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8">
+                                <div class="best-product-caption">
+                                    <h2 style="color: #000 !important;">{{'text.titleImage' |translate}}<br>
+                                        {{'text.titleImage2' |translate}}</h2>
+                                    <p style="color: #373b41 !important;">{{'text.Designers' |translate}}</p>
+                                    <a href="#" (click)="navCatagory($event)" class="black-btn">{{'button.shop Now'
+                                        |translate}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shape -->
+
+                <div class="shape bounce-animate d-none d-md-block">
+                    <img src="assets/img/categori/card-shape.png" alt="">
+                </div>
+            </div>
+
+            <!-- Best Product End-->
+            <!-- feature part here -->
+
+
+            <!--  Credibly innovate granularinternal or organic sourceswhereas standards.-->
+
+
+            <section class="feature_part section_padding" id="About">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6">
+                            <div class="feature_part_tittle">
+                                <h3>{{'about us.title1' |translate}}</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="feature_part_content">
+                                <p>{{'about us.title2' |translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_part">
+                                <img [ngClass]="isDarkMode ?'imagblack':'' " src="assets/img/icon/feature_icon_1.svg"
+                                    alt="#">
+                                <h4>{{'about us.img1' |translate}}</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_part">
+                                <img [ngClass]="isDarkMode ?'imagblack':'' " src="assets/img/icon/feature_icon_2.svg"
+                                    alt="#">
+                                <h4>{{'about us.img2' |translate}}</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_part">
+                                <img [ngClass]="isDarkMode ?'imagblack':'' " src="assets/img/icon/feature_icon_3.svg"
+                                    alt="#">
+                                <h4>{{'about us.img3' |translate}}</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single_feature_part">
+                                <img [ngClass]="isDarkMode ?'imagblack':'' " src="assets/img/icon/feature_icon_4.svg"
+                                    alt="#">
+                                <h4>{{'about us.img4' |translate}}</h4>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- feature part end -->
+
+
+            <!-- Gallery Start-->
+
+            <div class="gallery-wrapper lf-padding">
+                <div class="gallery-area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="gallery-items">
+                                <img src="assets/img/gallery/gallery1.jpg" alt="">
+                            </div>
+                            <div class="gallery-items">
+                                <img src="assets/img/gallery/gallery2.jpg" alt="">
+                            </div>
+                            <div class="gallery-items">
+                                <img src="assets/img/gallery/gallery3.jpg" alt="">
+                            </div>
+                            <div class="gallery-items">
+                                <img src="assets/img/gallery/gallery4.jpg" alt="">
+                            </div>
+                            <div class="gallery-items">
+                                <img src="assets/img/gallery/gallery5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery End-->
+             
+
+            <!-- JS here -->
+            <!-- All JS Custom Plugins Link Here here -->
+            <script src="/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+            <!-- Jquery, Popper, Bootstrap -->
+            <script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
+            <script src="/assets/js/popper.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+            <!-- Jquery Mobile Menu -->
+            <script src="/assets/js/jquery.slicknav.min.js"></script>
+
+            <!-- Jquery Slick , Owl-Carousel Plugins -->
+            <script src="/assets/js/owl.carousel.min.js"></script>
+            <script src="/assets/js/slick.min.js"></script>
+
+            <!-- One Page, Animated-HeadLin -->
+            <script src="/assets/js/wow.min.js"></script>
+            <script src="/assets/js/animated.headline.js"></script>
+            <script src="/assets/js/jquery.magnific-popup.js"></script>
+
+            <!-- Scrollup, nice-select, sticky -->
+            <script src="/assets/js/jquery.scrollUp.min.js"></script>
+            <script src="/assets/js/jquery.nice-select.min.js"></script>
+            <script src="/assets/js/jquery.sticky.js"></script>
+
+            <!-- contact js -->
+            <script src="/assets/js/contact.js"></script>
+            <script src="/assets/js/jquery.form.js"></script>
+            <script src="/assets/js/jquery.validate.min.js"></script>
+            <script src="/assets/js/mail-script.js"></script>
+            <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+
+            <!-- Jquery Plugins, main Jquery -->
+            <script src="/assets/js/plugins.js"></script>
+            <script src="/assets/js/main.js"></script>
+
+        </div>
+
+    </div>
+</div>
+
+<app-footer></app-footer>

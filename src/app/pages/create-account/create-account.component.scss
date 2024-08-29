@@ -1,0 +1,76 @@
+.img-radius {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    position: absolute; 
+    top: -40px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    border: 3px solid #fff; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.file-label {
+    position: absolute;
+    bottom: 30px;
+    right: -70px;
+    width: 40px;
+    height: 40px;
+    background-color: #2577fd;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .camera-icon {
+    font-size: 24px;
+  }
+
+  .Dark {
+    background-color: #282828 !important;
+    
+    a {
+      color: #fff !important;
+    }
+  
+    a:hover {
+      color: #2577fd !important;
+    }
+  
+    button {
+      color: #fff !important;
+      border-color: #fff !important;;
+    }
+    button:hover{
+      border-color: #2577fd !important;;
+
+    }
+    input{
+      background-color: #282828 !important;
+      color: #fff  !important;
+    }
+    textarea{
+      background-color: #282828 !important;
+      color: #fff  !important;
+    }
+    input::placeholder {
+      color: #fff !important; /* يجعل النص في الـ placeholder أبيض */
+    }
+    textarea::placeholder{
+      color: #fff !important;
+    }
+    mat-form-field  input{
+
+      background-color: #fff !important;
+   
+    }
+  }

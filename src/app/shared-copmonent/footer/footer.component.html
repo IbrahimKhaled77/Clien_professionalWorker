@@ -1,0 +1,93 @@
+
+<div [ngClass]="isDarkMode?'Dark':''">
+    <!-- Footer Start-->
+
+    <div class="footer-area footer-padding">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+                   <div class="single-footer-caption mb-50">
+                     <div class="single-footer-caption mb-30">
+                          <!-- logo -->
+
+                         <div *ngIf="!isDarkMode" class="footer-logo">
+                             <a href="index.html"><img src="/assets/img/logoo/professionalworkerlogotransparent.png"  width="80%" alt="logo"></a>
+                         </div>
+                         <div *ngIf="isDarkMode" class="footer-logo">
+                            <a href="index.html"><img src="/assets/img/logoo/professionalworkerhiglogo.png"  width="80%" alt="logo"></a>
+                        </div>
+                         <div class="footer-tittle">
+                             <div class="footer-pera">
+                                 <p>{{'Footer.importantt'|translate}}</p>
+                            </div>
+                         </div>
+                     </div>
+                   </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>{{'Footer.Quick'|translate}}</h4>
+                            <ul>
+                                <li><a href="#About">{{'Footer.About'|translate}}</a></li>
+                                <li><a href="#">{{'Footer.Offers'|translate}}</a></li>
+                                <li><a href="#">{{'Footer.Coupon'|translate}}</a></li>
+                                <li><a href="#"  [routerLink]="'/Problem'">{{'Footer.New'|translate}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>{{'Footer.Contact'|translate}}</h4>
+                            <ul>
+                                <li><a href="#">{{'Footer.Woman'|translate}}</a></li>
+                                <li><a href="#">{{'Footer.Accessories'|translate}}</a></li>
+                                <li><a href="#"> {{'Footer.Man'|translate}}</a></li>
+                                <li><a href="#"> {{'Footer.Rubber'|translate}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>{{'Footer.Support'|translate}}</h4>
+                            <ul>
+                             <li><a href="#">{{'Footer.Frequently'|translate}}</a></li>
+                             <li><a href="#">{{'Footer.Terms'|translate}}</a></li>
+                             <li><a href="#">{{'Footer.Privacy'|translate}}</a></li>
+                             <li><a href="#">{{'Footer.Policy'|translate}}</a></li>
+                             <li><a href="#">{{'Footer.Report'|translate}}</a></li>
+                         </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer bottom -->
+
+
+            <div class="row"  style="text-align: right; display: flex; justify-content: right;">
+             <div class="col-xl-7 col-lg-7 col-md-7" style="text-align: right; display: flex; justify-content: right;">
+               
+              <div class="col-xl-5 col-lg-5 col-md-5">
+                 <div class="footer-copy-right f-right">
+                     <!-- social -->
+                      
+                     <div class="footer-social">
+                         <a href="#"><i class="fab fa-twitter"></i></a>
+                         <a href="#"><i class="fab fa-facebook-f"></i></a>
+                         <a href="#"><i class="fas fa-globe"></i></a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+
+</div>
+
+
+

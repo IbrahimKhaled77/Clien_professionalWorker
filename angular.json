@@ -30,7 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+          
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-fussion.css"
+         
             ],
             "scripts": []
           },
@@ -39,13 +44,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2MB",
+                  "maximumError": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "160kb",
+                  "maximumError": "160kb"
                 }
               ],
               "outputHashing": "all"
@@ -91,9 +96,14 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+              
             ],
             "styles": [
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+               "src/styles.css"
+           
+              
             ],
             "scripts": []
           }

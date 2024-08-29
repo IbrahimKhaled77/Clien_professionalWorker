@@ -1,0 +1,53 @@
+.lost_pass {
+  color: #777777;
+
+  transition: color 0.3s ease;
+
+}
+
+.lost_pass:hover {
+  color: #007bff;
+ 
+}
+
+.Dark {
+  background-color: #282828 !important;
+
+  .add_to_cart a {
+    color: #fff !important;
+    border-color: #fff !important;
+    ;
+  }
+
+  .add_to_cart a:hover {
+    color: #fff !important;
+    border-color: #2577fd !important;
+    ;
+  }
+
+  .lost_pass a {
+    color: #fff !important;
+    border-color: #fff !important;
+    ;
+  }
+
+  .lost_pass a:hover {
+    color: #fff !important;
+    border-color: #2577fd !important;
+    ;
+  }
+
+  h3 {
+    color: #fff !important;
+  }
+
+  input {
+    background-color: #282828 !important;
+    color: #fff !important;
+  }
+
+  input::placeholder {
+    color: #fff !important;
+
+  }
+}

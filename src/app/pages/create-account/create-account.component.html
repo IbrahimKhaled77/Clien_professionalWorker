@@ -1,0 +1,117 @@
+<app-nav></app-nav>
+
+<div [ngClass]="isDarkMode?'Dark':''">
+    <!-- slider Area Start-->
+
+    <div class="slider-area ">
+
+        <!-- Mobile Menu -->
+
+        <div class="single-slider slider-height2 d-flex align-items-center"
+            style="background-image: url(&quot;assets/img/hero/category.jpg&quot;);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>{{'TitlePages.Create Account'|translate}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider Area End-->
+
+
+    <!--================login_part Area =================-->
+    <section class="login_part section_padding"
+        style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+        <div class="container" style="text-align: center;">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_form">
+                        <div class="login_part_form_iner">
+                            <div style="position: relative; display: inline-block; margin-bottom: 20px;">
+                                <a href="javascript:">
+                                    <img [src]="input3.imageProfile" name="imageProfile" class="img-radius"
+                                        alt="User-Profile-Image" />
+                                    <label for="file-input" class="file-label">
+
+                                        <i class="fas fa-camera camera-icon"></i>
+                                    </label>
+                                    <input (change)="onFileSelected($event)" name="imageProfile" type="file"
+                                        id="file-input" class="file-input">
+                                </a>
+
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                            <br>
+                            <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" [(ngModel)]="input.FirstName"
+                                        name="FirstName" placeholder="{{'Create Account.FirstName'|translate}}">
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" [(ngModel)]="input.LastName" name="LastName"
+                                        placeholder="{{'Create Account.LastName'|translate}}">
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="email" class="form-control" [(ngModel)]="input.Email" name="Email"
+                                        placeholder="{{'Create Account.Email'|translate}}">
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="password" class="form-control" [(ngModel)]="input.Password"
+                                        name="Password" placeholder="{{'Create Account.Password'|translate}}">
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" [(ngModel)]="input.Phone" name="Phone"
+                                        placeholder="{{'Create Account.Phone'|translate}}">
+                                    <br>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group p_star">
+                                        <mat-form-field appearance="fill" style="width: 100%;">
+                                            <mat-label>{{'Create Account.Gender'|translate}}</mat-label>
+                                            <mat-select [(ngModel)]="input.Gender" name="Gender">
+                                                <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                                                    {{gender.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 form-group p_star">
+                                        <mat-form-field appearance="fill" style="width: 100%;">
+                                            <mat-label>{{'Create Account.Brith Date'|translate}}</mat-label>
+                                            <!--*****-->
+                                            <input matInput [matDatepicker]="picker" [(ngModel)]="input.BirthDate"
+                                                name="BirthDate">
+                                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <button type="submit" value="submit" class="btn_3" style="width: 100%;"
+                                        (click)="CreateNewAccount($event)">{{'button.Create'|translate}}</button>
+                                    <a class="lost_pass" href="#"
+                                        style="color: rgb(13, 124, 235)">{{'button.login'|translate}}</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================login_part end =================-->
+    
+</div>
+<app-footer></app-footer>

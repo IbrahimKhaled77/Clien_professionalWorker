@@ -1,0 +1,93 @@
+<!-- Header Start -->
+
+<div class="header-area">
+    <div [ngClass]="isDarkMode?'Dark header-bottom header-sticky':'header-bottom header-sticky'">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+
+                <!-- Logo -->
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
+                    <div *ngIf="!isDarkMode" class="logo">
+                        <a href="index.html"><img src="/assets/img/logoo/professionalworkerlogotransparent.png"
+                                width="250%" alt="logo"></a>
+                    </div>
+                    <div *ngIf="isDarkMode" class="logo">
+                        <a href="index.html"><img src="/assets/img/logoo/professionalworkerhiglogo.png" width="250%"
+                                alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
+
+
+                    <!-- Main-menu -->
+                    <div
+                        [ngClass]="isDarkMode?'white main-menu f-right d-none d-lg-block ':'main-menu f-right d-none d-lg-block'">
+                        <nav>
+                            <ul id="navigation">
+
+                                <li><a href="#" (click)="navigateToHome($event)">{{'nav.Home' |translate}}</a></li>
+                                <li><a (click)="navigateToCatory($event)" [routerLink]="'/Catagori'">{{'nav.Categori'
+                                        |translate}}</a></li>
+
+                                <li><a (click)="navigateToUser($event)" [routerLink]="'/UpdateUser'">{{'nav.Profile'
+                                        |translate}}</a></li>
+
+                                <li><a (click)="navigateToProblem($event)" [routerLink]="'/Problem'">{{'nav.Problem'
+                                        |translate}}</a></li>
+
+                                <li><a (click)="navigateToOrder($event)" [routerLink]="'/OrderById'">{{'nav.My Orders'
+                                        |translate}} </a></li>
+
+                                <li><a href="#" (click)="navigateToAboutUs($event)">{{'nav.About Us' |translate}}</a>
+                                </li>
+
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                    <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
+
+
+                        <li class="d-none d-lg-block" style="margin-right: 10px; margin-top: 13px;"
+                            (click)="clickDark()">
+                            <mat-icon>brightness_3</mat-icon>
+                        </li>
+                        <li class="d-none d-lg-block" style="margin-right: 10px; margin-top: 13px;"
+                            (click)="changeLanguage()">
+                            <mat-icon>language</mat-icon>
+                        </li>
+                        <li *ngIf="!logg" class="d-none d-lg-block" style="margin-right: 10px;"> <a
+                                [routerLink]="'/Login'" class="btn header-btn">{{'button.Sign In' |translate}}</a></li>
+
+                        <li *ngIf="logg" class="d-none d-lg-block" style="margin-right: 10px;">
+                            <a class="btn header-btn" (click)="logout()" style=" color: white;">{{'button.Log Out'
+                                |translate}}</a>
+                        </li>
+                        <li>
+                            <div style="position: relative; margin-bottom: 20px;">
+                                <a href="#" [routerLink]="'/UpdateUser'">
+                                    <img [ngClass]="isDarkMode?'img-radius':'img-radius img-color'"
+                                        [src]="input.imageProfile" alt="User-Profile-Image" />
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header End -->

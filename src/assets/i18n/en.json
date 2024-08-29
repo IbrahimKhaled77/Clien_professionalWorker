@@ -1,0 +1,286 @@
+{
+   "dir": "ltr",
+   "nav": {
+      "Home": "Home",
+      "Categori": "Categori",
+      "Profile": "Profile",
+      "Problem": "Problem",
+      "My Orders": "My Orders",
+      "About Us": "About Us"
+   },
+   "TitlePages": {
+      "login": "login",
+      "Catagori": "Catagori",
+      "Create Account": "Create Account",
+      "Reset password Now": "Reset password Now",
+      "Order Status": "Order Status",
+      "Profile": "Profile",
+      "Service All": "Service All",
+      "Service": "Service",
+      "Checkout": "Checkout",
+      "Confirmation": "Confirmation",
+      "Problem": "Problem"
+   },
+   "button": {
+      "shop Now": "Shop Now",
+      "login": "login",
+      "Log Out": "Log Out",
+      "Sign In": "Sign In",
+      "UPDATE PROFILE": "UPDATE PROFILE",
+      "Back": "Back",
+      "RESET PASSWORD": "RESET PASSWORD",
+      "ORDER": "ORDER",
+      "Checkout": "Checkout",
+      "Send": "send",
+      "Go home": "home page",
+      "Rating": "Rating",
+      "Create": "Create Account"
+   },
+   "gen": {
+      "Back": "Back",
+      "Forget Password": "Forget Password",
+      "Price": "JOD",
+      "Yes": "Yes",
+      "No": "No"
+   },
+   "text": {
+      "Winter": "Winter",
+      "discount": "60% Discount",
+      "Collection": "Services",
+      "Best": "Best Services by 2024!",
+      "Latest Categorys": "Latest Categorys",
+      "titleImage": "Find the best services",
+      "titleImage2": "from our Shop",
+      "Designers": "People interested in various services."
+   },
+   "about us": {
+      "title1": "Various reliable or organic sources and services are created according to the standards.",
+      "title2": "Enable fully thought-out growth strategies and seamlessly aligned internal and “organic” resources. Create detailed internal and “organic” resources reliably while adhering to high standards in web readiness.",
+      "img1": "Credit Card Support",
+      "img2": "Online Order",
+      "img3": "Free Delivery",
+      "img4": "Discount on order"
+   },
+   "Confirmation": {
+      "title": "Thank you, your request has been received. We will inform you if your request has been accepted by the service provider.",
+      "order info": "order info",
+      "Billing Address": "Billing Address",
+      "Order Details": "Order Details"
+   },
+   "order info": {
+      "order number": "order number",
+      "data": "date",
+      "title": "title",
+      "ClientName": "ClientName",
+      "status": "status",
+      "priceFinal": "priceFinal",
+      "mayment methord": "mayment methord"
+   },
+   "Billing Address": {
+      "Address1": "Address1",
+      "Address2": "Address2",
+      "city": "city",
+      "Phone": "Phone"
+   },
+   "Order Details": {
+      "Product": "Product",
+      "Quantity": "Quantity",
+      "Total": "Total"
+   },
+   "Order Status": {
+      "Product": "Product",
+      "Status": "Status",
+      "Total": "Total",
+      "Quantity": "Quantity"
+   },
+   "Login": {
+      "UserName": "UserName",
+      "Password": "Password",
+      "title": "Welcome Back !",
+      "titleo": "Please Sign in now",
+      "title2": "New to our Shop?",
+      "title3": "There are advances being made in science and technology everyday, and a good example of this is the"
+   },
+   "Create Account": {
+      "FirstName": "FirstName",
+      "LastName": "LastName",
+      "Email": "Email",
+      "Password": "Password",
+      "Phone": "Phone",
+      "Gender": "Gender",
+      "Brith Date": "Brith Date"
+   },
+   "Problem": {
+      "title": "Get in Toach",
+      "DescriptionProblem": "Description Problem",
+      "titleProblem": "Title Problem",
+      "Puproses": "Puproses"
+   },
+   "password": {
+      "Email": "Email",
+      "New Password": "New Password"
+   },
+   "Catagori": {
+      "All": "All",
+      "New": "New",
+      "Free": "Free Shipping Method",
+      "aorem": "Service delivery and free service provider.",
+      "Secure": "Secure Payment System",
+      "ixpsacdolor": "A very secure electronic payment method is available.",
+      "Payment": "Refresh services periodically",
+      "sit": "Always update the services on a monthly basis."
+   },
+   "ServiceAll": {
+      "providerService": "providerService",
+      "QuantityUnit": "QuantityUnit",
+      "ISHaveDiscount": "ISHaveDiscount",
+      "priceAfterDiscount": "priceAfterDiscount",
+      "price": "price"
+   },
+   "Checkout": {
+      "title1": "Card details",
+      "Address Line 01": "Address Line 01",
+      "Town/City": "Town/City",
+      "Quantity": "Quantity",
+      "Order Note": "Order Note",
+      "Order Date": "Order Date",
+      "Address Line 02": "Address Line 02",
+      "BillingDetails": "Billing Details",
+      "ShippingDetails": "Shipping Details",
+      "Card Hodelr": "Card Hodelr",
+      "Card Number": "Card Number",
+      "code": "code",
+      "Order Title": "Order Title",
+      "Address line 01": "Address line 01",
+      "Address line 02": "Address line 02",
+      "Order Notes": "Order Notes"
+   },
+   "err": {
+      "oops": "oops",
+      "Page Not Found": "Page Not Found",
+      "Go back": "Go back"
+   },
+   "gendear": {
+      "Male": "Male",
+      "Female": "Female"
+   },
+   "toastor": {
+      "Confirmation": {
+         "successfully": "Your request has been sent successfully.",
+         "Failed": "Failed to load orderId"
+      },
+      "CreateAccount": {
+         "firstName": "Please Enter User first Name",
+         "Password": "Please Enter Password",
+         "Email": "Please Enter Email",
+         "Phone": "Please Enter Phone",
+         "LastName": "Please Enter LastName",
+         "BirthDate": "Please Enter BirthDate",
+         "Gender": "Please Enter Gender",
+         "token": "Login failed. No token received",
+         "Invalidtoken": "Invalid token",
+         "Found": "Not Found User",
+         "Wrong": "Wrong username or password",
+         "FailedCreate": "Failed To Create Account",
+         "Created": "Created User Successfully",
+         "Login": "Login success",
+         "Failed": "Failed To Create User"
+      },
+      "CreateOrder": {
+         "Failed": "Failed to load services",
+         "Note": "Please Enter Note",
+         "CardHolder": "Please Enter CardHolder",
+         "CardNumber": "Please Enter CardNumber",
+         "address1": "Please Enter address1",
+         "city": "Please Enter city",
+         "Quantity": "Please Enter Quantity",
+         "Order": "Please Enter Date Order",
+         "Code": "Please Enter Code",
+         "successfully": "Order created successfully.",
+         "order": "Please log in to Create an order",
+         "issue": "There was an issue with the data",
+         "sent": "sent. An error occurred while",
+         "creating": "creating the order",
+         "Pleaseagain": "Please try again"
+      },
+      "ForgetPassword": {
+         "name": "plase Enter User name",
+         "Password": "plase Enter New Password",
+         "Invalid": "Email Invalid ",
+         "Reset": "Reset Password Successfully",
+         "Failed": "Failed To Reset Password"
+      },
+      "GetAllGategorye": {
+         "Category": "not found Category",
+         "service": "Not Found service"
+      },
+      "GetServiceById": {
+         "Failed": "Failed to load service"
+      },
+      "Login": {
+         "username": "Please enter a username",
+         "password": "Please enter a password",
+         "Success": "Login Success",
+         "failed": "Login failed. No token received",
+         "token": "Invalid token",
+         "Wrong": "Wrong username or password"
+      },
+      "Main": {
+         "Category": "not found Category",
+         "service": "Not Found service"
+      },
+      "OrderByIdApproved": {
+         "Found": "Not Found Order"
+      },
+      "Problem": {
+         "title": "Please Enter title",
+         "submitting": "Thank you for submitting your issue",
+         "Please": "Please Log in , After Create Problem"
+      },
+      "Rating": {
+         "Rating": "Rating Successfully",
+         "Failed": "Failed To Rating"
+      },
+      "ServiceAll": {
+         "Not": "Not Found service",
+         "Failed": "Failed to load services"
+      },
+      "UpdateUser": {
+         "Not": "Not Found User , Please  Log in",
+         "Faild": "Faild GetUserDetails",
+         "Updatedimage2": "Updated image2 Successfully",
+         "failed": "Failed To Updated image2",
+         "UpdatedUser": "Updated User Successfully",
+         "Failed": "Failed To Updated User"
+      },
+      "Nav": {
+         "Failed": "Failed Logon",
+         "Not": "Not Found User"
+      }
+   },
+   "Footer":{
+      "important":"It is very important for the client to be aware of the client's needs.",
+      "Quick":"Quick Links",
+      "About":"About",
+      "Offers":"Offers & Discounts",
+      "Coupon":"Get Coupon",
+      "Contact":"Contact Us",
+      "New":"New services",
+      "Woman":"barber",
+      "Accessories":"Cleaners",
+      "Man":"Carpenter",
+      "Rubber":"Electrician",
+      "Support":"Support",
+      "Frequently":"Frequently Asked Questions",
+      "Terms":"Terms & Conditions",
+      "Privacy":"Privacy Policy",
+      "Policy":"Privacy Policy",
+      "Report":"Report a Payment Issue"
+
+
+
+   }
+
+
+
+}

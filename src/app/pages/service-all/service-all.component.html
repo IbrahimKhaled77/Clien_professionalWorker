@@ -1,0 +1,161 @@
+<app-nav id="ServiceAll"></app-nav>
+
+
+<div [ngClass]="isDarkMode?'Dark':''">
+
+    <!-- slider Area Start-->
+
+    <div class="slider-area ">
+
+        <!-- Mobile Menu -->
+
+        <div class="single-slider slider-height2 d-flex align-items-center"
+            style="background-image: url(&quot;/assets/img/hero/category.jpg&quot;);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>{{'TitlePages.Service All' |translate}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider Area End-->
+
+    <!-- Latest Products Start -->
+
+    <section class="latest-product-area latest-padding">
+        <div class="container">
+            <div class="row product-btn d-flex justify-content-between">
+                <div class="properties__button">
+                </div>
+            </div>
+
+
+
+            <!-- Nav Card -->
+
+            <div class="tab-content" id="nav-tabContent">
+
+                <!-- card one -->
+
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4 col-md-6" *ngFor="let item of input2 ">
+                            <div class="single-product mb-60">
+                                <div class="product-img">
+                                    <img [src]="item.imagetitleservice" alt="k">
+                                    <div class="new-product">
+
+                                        <!-- محتوى إضافي -->
+
+                                    </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h4><a href="#" style="font-weight: 600;"
+                                            (click)="CilckService(item.serviceId!,$event)">{{language == 'en'?
+                                            item.name:item.titleservice}}</a></h4>
+                                    <h4><span style="font-weight: 500;">{{'ServiceAll.providerService'
+                                            |translate}}</span>: {{item.providerUser}}</h4>
+                                    <div class="price">
+                                        <ul>
+                                            <!--Price-->
+
+                                            <li>{{'gen.Price' |translate}} {{item.price}}</li>
+                                            <!--PriceAfter-->
+
+                                            <li class="discount" style="color: red !important;">{{'gen.Price'
+                                                |translate}} {{item.priceAfterDiscount}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- card one -->
+
+            </div>
+
+
+
+
+        </div>
+
+        <!-- End Nav Card -->
+
+    </section>
+
+    <!-- Latest Products End -->
+
+
+    <!-- Shop Method Start-->
+
+    <div class="shop-method-area section-padding30">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-package"></i>
+                        <h6>{{'Catagori.Free' |translate}}</h6>
+                        <p>{{'Catagori.aorem' |translate}}</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-unlock"></i>
+                        <h6>{{'Catagori.Secure' |translate}}</h6>
+                        <p>{{'Catagori.ixpsacdolor' |translate}}</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-reload"></i>
+                        <h6>{{'Catagori.Payment' |translate}}</h6>
+                        <p>{{'Catagori.sit' |translate}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop Method End-->
+
+    <!-- Gallery Start-->
+
+    <div class="gallery-wrapper lf-padding">
+        <div class="gallery-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="gallery-items">
+                        <img src="/assets/img/gallery/gallery1.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="/assets/img/gallery/gallery2.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="/assets/img/gallery/gallery3.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="/assets/img/gallery/gallery4.jpg" alt="">
+                    </div>
+                    <div class="gallery-items">
+                        <img src="/assets/img/gallery/gallery5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery End-->
+
+</div>
+
+<app-footer></app-footer>

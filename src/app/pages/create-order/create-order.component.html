@@ -1,0 +1,150 @@
+<app-nav id="CreateOrder"></app-nav>
+
+
+
+
+<div [ngClass]="isDarkMode?'Dark':''">
+  <div *ngIf="islogin">
+    <!-- slider Area Start-->
+
+    <div class="slider-area ">
+
+      <!-- Mobile Menu -->
+
+      <div class="single-slider slider-height2 d-flex align-items-center"
+        style="background-image: url(&quot;assets/img/hero/category.jpg&quot;);">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="hero-cap text-center">
+                <h2>{{'TitlePages.Checkout' |translate}}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- slider Area End-->
+
+    <!--================Checkout Area =================-->
+
+    <section class="checkout_area section_padding">
+      <div class="container ">
+
+
+        <div class="billing_details">
+          <div class="row">
+            <div class="col-lg-8">
+              <h1 style="color: #415094;">{{'Checkout.title1' |translate}}</h1>
+              <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+
+                <div class="col-md-12 form-group">
+                  <input type="text" class="form-control" [(ngModel)]="input.cardHolder" name="CardHodelr"
+                    placeholder="{{'Checkout.Card Hodelr ' |translate}}" />
+                </div>
+
+                <div class="col-md-12 form-group ">
+                  <input type="text" class="form-control" [(ngModel)]="input.cardNumber" name="CardNumber"
+                    placeholder=" {{'Checkout.Card Number' |translate}}" />
+                </div>
+                <div class="col-md-12 form-group">
+                  <input type="text" class="form-control" [(ngModel)]="input.code" name="Code"
+                    placeholder="{{'Checkout.code ' |translate}}" />
+                </div>
+
+
+                <h1 style="color: #415094; padding-left: 15px;">{{'Checkout.BillingDetails' |translate}}</h1>
+
+
+                <div class="col-md-12 form-group p_star">
+
+                  <input type="text" [(ngModel)]="input.address1" name="Address1" class="form-control"
+                    placeholder="{{'Checkout.Address line 01' |translate}}" />
+
+                </div>
+                <div class="col-md-12 form-group p_star">
+                  <input type="text" class="form-control" [(ngModel)]="input.address2" name="Address2"
+                    placeholder="{{'Checkout.Address line 02' |translate}}" />
+
+                </div>
+                <div class="col-md-12 form-group p_star">
+                  <input type="text" class="form-control" [(ngModel)]="input.city" name="city"
+                    placeholder="{{'Checkout.Town/City' |translate}}" />
+
+                </div>
+
+                <h1 style="color: #415094; padding-left: 15px;">{{'Checkout.ShippingDetails' |translate}}</h1>
+                <div class="col-md-12 form-group">
+                  <input type="text" class="form-control" [(ngModel)]="input.title" name="Title"
+                    placeholder="{{'Checkout.Order Title' |translate}}" readonly />
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <input type="number" class="form-control" [(ngModel)]="input.quantity" name="Quantity"
+                    placeholder="{{'Checkout.Quantity' |translate}}" />
+                </div>
+
+                <div class="col-md-12 form-group">
+
+                  <textarea class="form-control" [(ngModel)]="input.note" name="Note" rows="1"
+                    placeholder="{{'Checkout.Order Notes' |translate}}"></textarea>
+
+                </div>
+                <div class="col-md-6 form-group p_star">
+                  <mat-form-field appearance="fill" style="width: 60%;">
+                    <mat-label>{{ 'Checkout.Order Date' | translate }}</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="input.dateOrder" name="dateOrder">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker startView="multi-year"></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="card_area" style="display: flex;  ">
+                  <div class="add_to_cart" style=" margin-right: 151px;">
+                    <a href="#" class="btn_3" (click)="goBack($event)">
+                      <i class="fas fa-arrow-left"></i>
+                    </a>
+                  </div>
+                  <div class="add_to_cart" style="text-align: center; justify-content: center; align-items: center;">
+                    <a href="#" class="btn_3" (click)="CreateNewOrder($event)">{{'button.Checkout' |translate}}</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <div *ngIf="!islogin">
+
+
+    <div id="notfound">
+      <div class="notfound">
+        <div class="notfound-bg">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h1 style="color: rgb(0, 110, 255);">oops!</h1>
+        <br>
+        <h2>Plase Login Now , After Create Order</h2>
+        <div class="d-none d-lg-block"> <button [routerLink]="'/Login'" class="btn header-btn"
+            style="background-color: rgb(0, 110, 255);">Login in</button></div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<!--================End Checkout Area =================-->
+
+
+<app-footer></app-footer>
