@@ -52,7 +52,7 @@ Login(event:Event) {
     this.spinner.hide();
    
     if (!data) {
-      this.toastr.error(this.translate.instant('toastor.Login.Success'));
+      this.toastr.error(this.translate.instant('toastor.Login.failed'));
       return;
     }
     
@@ -63,7 +63,7 @@ Login(event:Event) {
     try {
       decodedToken = jwtDecode(data);
     } catch (error) {
-      this.toastr.error(this.translate.instant('toastor.Login.failed'));
+      this.toastr.error(this.translate.instant('toastor.Login.token'));
       return;
     }
 
@@ -71,7 +71,7 @@ Login(event:Event) {
     localStorage.setItem('EmailUser', decodedToken.Email);
     localStorage.setItem('UserType', decodedToken.UserType);
     
-    this.toastr.success(this.translate.instant('toastor.Login.token'));
+    this.toastr.success(this.translate.instant('toastor.Login.Success'));
     this.router.navigate(['/Main']);
   }, err => {
     this.spinner.hide();

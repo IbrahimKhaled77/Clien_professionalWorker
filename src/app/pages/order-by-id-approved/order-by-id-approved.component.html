@@ -61,7 +61,7 @@
 
                   <!--Status order-->
 
-                  <h5>{{ language=='en'? status[item.status!]: status2[item.status!]}}</h5>
+                  <h5>{{ language=='en'||language==null? status[item.status!]: status2[item.status!]}}</h5>
                 </td>
 
                 <td>
@@ -83,7 +83,7 @@
 
                   <li *ngIf="status[item.status!] == 'Delivered'? !ishowbutton : ishowbutton " class="d-none d-lg-block"
                     style="text-align: right; justify-items: right;  "> <a (click)="Rating(item)" class="btn header-btn"
-                      style="color: antiquewhite;  width: 40%; height: 50%; text-align: center; justify-content: center; margin-right: 20px;">
+                      style="color: antiquewhite;  width: 40%; height: 50%; text-align: center; justify-content: center; margin-right: 50px;">
                       {{'button.Rating'|translate}}</a></li>
 
                 </td>
@@ -101,7 +101,7 @@
   </section>
 
 
-  <div style="margin-right:160px ; text-align: right">
+  <div *ngIf="orderGetAllDto!=null" style="margin-right:160px ; text-align: right">
     <a class="btn header-btn" href="#" [routerLink]="'/'"> {{'button.Go home'|translate}}</a>
   </div>
   

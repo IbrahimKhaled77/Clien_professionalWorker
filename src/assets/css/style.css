@@ -3881,6 +3881,7 @@ input:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -3924,6 +3925,7 @@ input:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  
 }
 
 @media (max-width: 767px) {
@@ -4382,13 +4384,14 @@ input:focus {
 /* line 26, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
 .latest-product-area .single-product .product-img img {
   width: 100%;
+
 }
 
 /* line 30, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
 .latest-product-area .single-product .product-img .new-product {
   position: absolute;
-  top: 25px;
-  left: 23px;
+  top: 4px;
+  left: -5px;
 }
 
 /* line 34, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
@@ -4408,7 +4411,7 @@ input:focus {
 
 /* line 47, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */
 .latest-product-area .single-product h4 a:hover {
-  color: #ff003c;
+  color: #007bff;
 }
 
 /* line 54, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_latest_products.scss */

@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="product-caption">
                                     <h4><a href="#" style="font-weight: 600;"
-                                            (click)="CilckService(item.serviceId!,$event)">{{language == 'en'?
+                                            (click)="CilckService(item.serviceId!,$event)">{{language == 'en'||language==null?
                                             item.name:item.titleservice}}</a></h4>
                                     <h4><span style="font-weight: 500;">{{'ServiceAll.providerService'
                                             |translate}}</span>: {{item.providerUser}}</h4>

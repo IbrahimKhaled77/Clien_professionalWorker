@@ -5,6 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { MainService } from 'src/app/backend/main.service';
+import { DarkModeService } from 'src/app/backend/services/dark-mode.service';
 import { RatingDTO } from 'src/app/dtos/CongirmDialog/CongirmDialog';
 import { orderGetAllDto } from 'src/app/dtos/OrderDTO/GetAllOrderDTO';
 
@@ -20,10 +21,16 @@ export class RatingComponent {
 
   input: RatingDTO = new RatingDTO();
 
-  constructor(public dialogRef: MatDialogRef<RatingComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: orderGetAllDto,private translate: TranslateService, private route: ActivatedRoute, public backend: MainService, private toastr: ToastrService, private router: Router, public spinner: NgxSpinnerService
+  isDarkMode: boolean = false;
 
-  ) { }
+  constructor(public dialogRef: MatDialogRef<RatingComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: orderGetAllDto,private translate: TranslateService, private darkModeService: DarkModeService, private route: ActivatedRoute, public backend: MainService, private toastr: ToastrService, private router: Router, public spinner: NgxSpinnerService
+
+  ) { 
+
+    this.darkModeService.isDarkMode$.subscribe((mode) => (this.isDarkMode = mode));
+
+  }
 
 
 

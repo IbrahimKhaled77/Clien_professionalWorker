@@ -12,9 +12,9 @@
         <div class="slider-area ">
 
             <!-- Mobile Menu -->
-
+            
             <div class="slider-active">
-                <div class="single-slider slider-height" data-background="assets/img/hero/h1_hero.jpg">
+                <div class="single-slider slider-height" [ngClass]="isDarkMode?'':'backimg'"   data-background="src/assets/img/hero/h1_hero.jpg">
                     <div class="container">
                         <div class="row d-flex align-items-center justify-content-between">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
@@ -80,18 +80,14 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6" *ngFor="let item of categoryAll | slice:0:6">
                                     <div class="single-product mb-60">
                                         <div class="product-img">
-                                            <img [src]="item.imageTitleCategory" alt="k">
-                                            <div class="new-product">
-
-                                                <!-- محتوى إضافي -->
-
-                                            </div>
+                                            <img [src]="item.imageTitleCategory" alt="k" >
+                            
                                         </div>
                                         <div class="product-caption">
                                             <h4><a style="font-weight: 500;" href="#"
-                                                    (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'?
+                                                    (click)="CilckCategory(item.categoryId,$event)">{{language == 'en' ||language==null?
                                                     item.title:item.titleArabic}}</a></h4>
-                                            <h4>{{language == 'en'? item.description:item.descriptionArabic}}</h4>
+                                            <h4>{{language == 'en'||language==null? item.description:item.descriptionArabic}}</h4>
                                         </div>
                                     </div>
                                 </div>

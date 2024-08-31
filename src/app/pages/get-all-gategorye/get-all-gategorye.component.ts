@@ -99,7 +99,18 @@ export class GetAllGategoryeComponent {
   }
 
 
+  boolIsshowAll(){
 
+this.isshowAll=true
+
+  }
+
+
+  boolIsshowNew(){
+
+    this.isshowAll=false
+    
+      }
  
 }
 

@@ -1,3 +1,4 @@
+<div [ngClass]="isDarkMode?'Black':''">
 <div style="text-align: center; height: 200px;">
   <h1 mat-dialog-title style="font-size: 20px; font-weight: bold;">{{data.title}}</h1>
 
@@ -12,4 +13,5 @@
       |translate}}</button>
     <button mat-button mat-dialog-close style="color:red " (click)="ClickNo()">{{'gen.No' |translate}}</button>
   </div>
+</div>
 </div>

@@ -36,10 +36,10 @@
               
                         
                     <div class="single_product_text text-left">
-                        <h1 style="margin-bottom: 10px; text-align: center;">{{language == 'en'?
+                        <h1 style="margin-bottom: 10px; text-align: center;">{{language == 'en'||language==null?
                             input.name:input.titleservice}}</h1>
                         <p style="margin-bottom: 0;">
-                            {{language == 'en'? input.description:input.descriptionArabic}}
+                            {{language == 'en'||language==null? input.description:input.descriptionArabic}}
                         </p>
                         <br>
                         <p style="margin-bottom: 0;margin-top: 0;"><span

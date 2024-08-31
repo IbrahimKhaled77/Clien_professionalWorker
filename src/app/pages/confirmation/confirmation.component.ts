@@ -18,9 +18,11 @@ export class ConfirmationComponent implements OnInit {
 
  input:GetOrderByIdDto=new GetOrderByIdDto();
  orderId: number=0;
+ status: string[] = ['Pending', 'Shipped', 'Delivered', 'Cancelled'];
 
+  
  isDarkMode:boolean=false;
-
+ language: string | null = null;
   constructor(private translate: TranslateService, private darkModeService: DarkModeService,private route: ActivatedRoute,public backend:MainService,private toastr:ToastrService,private router:Router,public spinner:NgxSpinnerService){
 
     this.darkModeService.isDarkMode$.subscribe((mode) => (this.isDarkMode = mode));
@@ -32,12 +34,20 @@ export class ConfirmationComponent implements OnInit {
 
   ngOnInit(){
    
-   
+    this.language = localStorage.getItem('language');
+
     const OrderIdString  = this.route.snapshot.paramMap.get('orderId');
     if (OrderIdString ) {
       this.orderId = parseInt(OrderIdString, 10);
       this.CilckOrderById(this.orderId); 
     }
+
+
+    this.translate.onLangChange.subscribe(() => {
+     
+      this.language = this.translate.currentLang;
+      localStorage.setItem('language', this.language);
+    });
 
 
   }

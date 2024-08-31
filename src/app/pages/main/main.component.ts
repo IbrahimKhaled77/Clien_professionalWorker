@@ -23,12 +23,13 @@ export class MainComponent {
 
   constructor(private translate: TranslateService, private darkModeService: DarkModeService, public backend: MainService, private toastr: ToastrService, public spinner: NgxSpinnerService, private router: Router, private route: ActivatedRoute) {
 
-
+    
 
     this.darkModeService.isDarkMode$.subscribe((mode) => (this.isDarkMode = mode));
   }
 
   ngOnInit() {
+   
     this.language = localStorage.getItem('language');
  
 

@@ -92,7 +92,7 @@ import {HttpClient} from '@angular/common/http'
     NgbModule,
     HttpClientModule,
     TranslateModule.forRoot({
-      defaultLanguage:localStorage.getItem("language")??'en' ,
+      defaultLanguage:localStorage.getItem("language") ==null ?'en':localStorage.getItem("language")!,
         loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,

@@ -27,8 +27,8 @@
                         <!--Nav Button  -->
                         <nav>                                                                                                
                             <div class="nav nav-tabs" id="nav-tab" role="tablist" >
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"  role="tab"  aria-controls="nav-home"  aria-selected="true">{{'Catagori.All' |translate}}</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"   role="tab"   aria-controls="nav-profile" aria-selected="false">{{'Catagori.New' |translate}}</a>
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"  (click)="boolIsshowAll()"  role="tab"  aria-controls="nav-home"  aria-selected="true">{{'Catagori.All' |translate}}</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"   (click)="boolIsshowNew()" role="tab"   aria-controls="nav-profile" aria-selected="false">{{'Catagori.New' |translate}}</a>
                                
                             </div>
                         </nav>
@@ -51,8 +51,8 @@
                             </div>
                         </div>
                         <div class="product-caption">
-                            <h4><a  style="font-weight: 500;" href="#" (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'? item.title:item.titleArabic}}</a></h4>
-                            <h4>{{language == 'en'? item.description:item.descriptionArabic}}</h4>
+                            <h4><a  style="font-weight: 500;" href="#" (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'||language==null? item.title:item.titleArabic}}</a></h4>
+                            <h4>{{language == 'en'||language==null? item.description:item.descriptionArabic}}</h4>
                         </div>
                     </div>
                 </div>
@@ -70,12 +70,12 @@
                 <div class="product-img">
                     <img [src]="item.imageTitleCategory" alt="imageTitleCategory">
                     <div class="new-product">
-                        <!-- محتوى إضافي -->
+                        <span>New</span>
                     </div>
                 </div>
                 <div class="product-caption">
-                    <h4><a  style="font-weight: 500;" href="#" (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'? item.title:item.titleArabic}}</a></h4>
-                    <h4>{{language == 'en'? item.description:item.descriptionArabic}}</h4>
+                    <h4><a  style="font-weight: 500;" href="#" (click)="CilckCategory(item.categoryId,$event)">{{language == 'en'||language==null? item.title:item.titleArabic}}</a></h4>
+                    <h4>{{language == 'en'||language==null? item.description:item.descriptionArabic}}</h4>
                 </div>
             </div>
         </div>
