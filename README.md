@@ -4,6 +4,7 @@ It is a platform that allows craftsmen and owners of manual trades to display th
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
+| [Gradient Able Free](https://codedthemes.com/demos/admin-templates/gradient-able/angular/free/) | [Gradient Able](https://codedthemes.com/item/gradient-able-angular-admin-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)            |
 | -------------------------------------------------------     | :------------------------------------------------------------------------------- |
 | **9** Demo pages                                            | **45+** demo pages                                                               |
 | -                                                           | ✓ Multi-language                                                                 |
@@ -11,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 | -                                                           | ✓ TypeScript version                                                             |
 | -                                                           | ✓ 6+ color Options                                                               |
 | -                                                           | ✓ RTL                                                                            |
-| ✓ MIT License                                               | ✓ [Pro License](https://codedthemes.com/item/gradient-able-angular-admin-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)                |
+| ✓ MIT License                                               | ✓ [Pro License](https://codedthemes.com/item/gradient-able-angular-admin-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)             |
 
 ## Development server
 
